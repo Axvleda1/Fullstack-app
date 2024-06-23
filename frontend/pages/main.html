@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/mainStyles.css" />
+    <title>Add Certificate</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add Certificate</h1>
+      <form id="certificateForm">
+        <div>
+          <label for="certificateName">Certificate Name:</label>
+          <input
+            type="text"
+            id="certificateName"
+            name="certificateName"
+            required
+          />
+        </div>
+        <div>
+          <label for="creationDate">Creation Date:</label>
+          <input type="date" id="creationDate" name="creationDate" required />
+        </div>
+        <div>
+          <label for="expiryDate">Expiry Date:</label>
+          <input type="date" id="expiryDate" name="expiryDate" required />
+        </div>
+        <input id="submit-btn" type="submit" value="Add Certificate" />
+      </form>
+
+      <h1>Certificates</h1>
+
+      <div id="certificatesList"></div>
+    </div>
+    <script src="/scripts/AddSertificate.js"></script>
+    <script src="/scripts/getCertificates.js"></script>
+  </body>
+</html>

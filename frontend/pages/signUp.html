@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p class="prompt">Create an account below.</p>
+      <form id="signupForm">
+        <div class="form-group">
+          <label for="Username">Username:</label>
+          <input type="Username" id="Username" name="Username" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" required />
+        </div>
+        <div class="form-group">
+          <label for="RepeatPassword">Repeat Password:</label>
+          <input
+            type="password"
+            name="RepeatPassword"
+            id="RepeatPassword"
+            required
+          />
+        </div>
+        <input class="login-btn" type="submit" value="Sign Up" />
+      </form>
+      <div class="form-group">
+        <a class="backToLogin" href="logIn.html">Back to login</a>
+      </div>
+    </div>
+    <script src="/scripts/SendToApiSignUp.js"></script>
+  </body>
+</html>
