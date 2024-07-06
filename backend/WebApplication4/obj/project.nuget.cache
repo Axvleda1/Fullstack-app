@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kn4nYnztZLRXBl29KC/H9om4RMFjr64V0Xb8er+UBA+6i0CVEUHYImsJREaKJ5keCXv3BYPC+N61QqaYP66JeA==",
+  "dgSpecHash": "irucGezy9/+yAblvc8jq1azcWCdAGVL+Sx8hlsNrlg2d5eU/mPRaM2+7uiHzIfrV3bS2IcyMvC/gtBeOdmrMKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Luka\\source\\repos\\WebApplication4\\WebApplication4\\LogInBack.csproj",
+  "projectFilePath": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\LogInBack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luka\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Luka\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",
