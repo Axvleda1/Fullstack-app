@@ -19,16 +19,26 @@ document
       body: JSON.stringify(user),
     })
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
+        if (response.status === 400) {
+          throw new Error("Email Or Password is incorrect");
         }
-        return response.json();
+        return response.text();
       })
       .then((data) => {
         localStorage.setItem("user", JSON.stringify(data));
         window.location.href = "main.html";
       })
       .catch((error) => {
-        console.error("Error:", error);
+        displayError(error.message);
       });
+    function displayError(message) {
+      const errorElement = document.getElementById("errorMessage");
+      if (errorElement) {
+        errorElement.textContent = message;
+        errorElement.style.display = "block";
+        errorElement.style.color = "red";
+      } else {
+        console.error("Error element not found to display error:", message);
+      }
+    }
   });

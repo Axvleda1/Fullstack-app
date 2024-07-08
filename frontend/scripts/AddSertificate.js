@@ -1,19 +1,27 @@
 let certificate;
 
 const user = JSON.parse(localStorage.getItem("user"));
+
 document
   .getElementById("certificateForm")
-  .addEventListener("submit", function () {
-    console.log("woww");
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
     const certificateName = document.getElementById("certificateName").value;
     const expiryDate = document.getElementById("expiryDate").value;
     const creationDate = document.getElementById("creationDate").value;
+
+    if (!certificateName || !creationDate || !expiryDate) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
     certificate = {
       CertificateName: certificateName,
       CreationDate: creationDate,
       ExpiryDate: expiryDate,
     };
-    console.log(certificate);
+
     if (user) {
       addCertificate(user, certificate);
     } else {
@@ -27,10 +35,7 @@ function addCertificate(user, certificate) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      User: user,
-      Certificate: certificate,
-    }),
+    body: JSON.stringify({ User: user, Certificate: certificate }),
   })
     .then((response) => {
       localStorage.setItem("certificate", JSON.stringify(certificate));
@@ -39,7 +44,11 @@ function addCertificate(user, certificate) {
       }
       return response.text();
     })
+    .then((data) => {
+      alert("Certificate added successfully.");
+    })
     .catch((error) => {
       console.error("Error:", error);
+      alert("Failed to add certificate.");
     });
 }

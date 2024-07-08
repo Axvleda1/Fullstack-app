@@ -10,16 +10,13 @@ using Microsoft.Data.SqlClient;
 public class CertificateExpiryNotificationService : BackgroundService
 {
     private readonly IServiceScopeFactory _scopeFactory;
-    private readonly ILogger<CertificateExpiryNotificationService> _logger;
     private readonly IConfiguration _configuration;
 
     public CertificateExpiryNotificationService(
         IServiceScopeFactory scopeFactory,
-        ILogger<CertificateExpiryNotificationService> logger,
         IConfiguration configuration)
     {
         _scopeFactory = scopeFactory;
-        _logger = logger;
         _configuration = configuration;
     }
 

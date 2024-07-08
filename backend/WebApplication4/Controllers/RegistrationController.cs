@@ -22,9 +22,14 @@ public class RegistrationController : ControllerBase
 
         using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("UsersCon")))
         {
+            if (user.Password.Length < 8)
+            {
+                return BadRequest("Password should be at least 8 characters long.");
+            }
+
             if (UserExists(user.Email))
             {
-                return Unauthorized("User Already Exists");
+                return Conflict("User already exists.");
             }
 
             string selectQuery = "SELECT * FROM Users WHERE Email = @Email AND Password = @Password";
@@ -71,6 +76,11 @@ public class RegistrationController : ControllerBase
     {
         using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("UsersCon")))
         {
+            if (user.Password.Length < 8 || !UserExists(user.Email))
+            {
+                return BadRequest("Invalid credentials. Please check your email and password.");
+            }
+
             string query = "SELECT * FROM Users WHERE Email = @Email AND Password = @Password";
             var password = HashPassword(user.Password);
             SqlCommand command = new SqlCommand(query, connection);

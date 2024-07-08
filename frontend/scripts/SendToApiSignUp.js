@@ -1,5 +1,3 @@
-let user;
-
 document
   .getElementById("signupForm")
   .addEventListener("submit", function (event) {
@@ -11,16 +9,16 @@ document
     const repeatPassword = document.getElementById("RepeatPassword").value;
 
     if (password !== repeatPassword) {
-      alert("Passwords do not match!");
+      displayError("Passwords do not match.");
       return;
     }
 
     if (password.length < 8 || repeatPassword.length < 8) {
-      alert("password is too short");
+      displayError("Password should be at least 8 characters long.");
       return;
     }
 
-    user = {
+    const user = {
       Username: username,
       Email: email,
       Password: password,
@@ -35,6 +33,9 @@ document
       body: JSON.stringify(user),
     })
       .then((response) => {
+        if (response.status === 409) {
+          throw new Error("User already exists.");
+        }
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -45,6 +46,17 @@ document
         window.location.href = "main.html";
       })
       .catch((error) => {
-        console.error("Error:", error);
+        displayError(error.message);
       });
   });
+
+function displayError(message) {
+  const errorElement = document.getElementById("errorMessage");
+  if (errorElement) {
+    errorElement.textContent = message;
+    errorElement.style.display = "block";
+    errorElement.style.color = "red";
+  } else {
+    console.error("Error element not found to display error:", message);
+  }
+}

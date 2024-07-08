@@ -75,7 +75,7 @@ namespace WebApplication4.Controllers
                         CertificateName = reader["CertificateName"].ToString(),
                         CreationDate = Convert.ToDateTime(reader["CreationDate"]),
                         ExpiryDate = Convert.ToDateTime(reader["ExpiryDate"])
-                    });
+                    }); 
                 }
 
                 return Ok(certificates);
