@@ -10,7 +10,6 @@ function loadCertificates() {
     Certificate: JSON.parse(certificateForDto),
   };
 
-  console.log(requestPayload);
   fetch("https://localhost:44358/api/Certificates/getCertificates", {
     method: "POST",
     headers: {

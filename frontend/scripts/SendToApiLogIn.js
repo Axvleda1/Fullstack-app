@@ -25,7 +25,6 @@ document
         return response.text();
       })
       .then((data) => {
-        alert(data);
         localStorage.setItem("user", data);
         window.location.href = "main.html";
       })

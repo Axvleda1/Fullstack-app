@@ -2,7 +2,6 @@ let certificate;
 
 let user;
 user = JSON.parse(localStorage.getItem("user"));
-console.log(user);
 document
   .getElementById("certificateForm")
   .addEventListener("submit", function (event) {
@@ -50,6 +49,5 @@ function addCertificate(user, certificate) {
     })
     .catch((error) => {
       console.error("Error:", error);
-      alert("Failed to add certificate.");
     });
 }
