@@ -5,7 +5,7 @@ document
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const user = {
+    user = {
       Email: email,
       Password: password,
     };
@@ -25,7 +25,8 @@ document
         return response.text();
       })
       .then((data) => {
-        localStorage.setItem("user", JSON.stringify(data));
+        alert(data);
+        localStorage.setItem("user", data);
         window.location.href = "main.html";
       })
       .catch((error) => {

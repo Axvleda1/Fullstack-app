@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 using WebApplication4.DTOs;
 using WebApplication4.Models;
 
@@ -80,6 +82,18 @@ namespace WebApplication4.Controllers
 
                 return Ok(certificates);
             }
+        }
+        public static string HashPassword(string password)
+        {
+
+            using var sha = SHA256.Create();
+
+            var asBytes = Encoding.UTF8.GetBytes(password);
+
+            var hashed = sha.ComputeHash(asBytes);
+
+            return Convert.ToBase64String(hashed);
+
         }
     }
 

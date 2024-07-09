@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const loggedInUser = JSON.parse(localStorage.getItem("user"));
-  const certificateForDto = JSON.parse(localStorage.getItem("certificate"));
+  loadCertificates();
+});
+function loadCertificates() {
+  const loggedInUser = localStorage.getItem("user");
+  const certificateForDto = localStorage.getItem("certificate");
 
-  if (!loggedInUser || typeof loggedInUser.id === "undefined") {
-    console.error("Invalid user object or user.id is undefined", loggedInUser);
-    return;
-  }
+  const requestPayload = {
+    User: JSON.parse(loggedInUser),
+    Certificate: JSON.parse(certificateForDto),
+  };
 
-  const requestPayload = { User: loggedInUser, Certificate: certificateForDto };
-
+  console.log(requestPayload);
   fetch("https://localhost:44358/api/Certificates/getCertificates", {
     method: "POST",
     headers: {
@@ -28,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => {
       console.error("Error:", error);
     });
-});
+}
 
 function displayCertificates(certificates) {
   const certificatesList = document.getElementById("certificatesList");

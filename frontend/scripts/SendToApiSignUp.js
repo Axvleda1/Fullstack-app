@@ -18,7 +18,7 @@ document
       return;
     }
 
-    const user = {
+    user = {
       Username: username,
       Email: email,
       Password: password,

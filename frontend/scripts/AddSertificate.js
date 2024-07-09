@@ -1,7 +1,8 @@
 let certificate;
 
-const user = JSON.parse(localStorage.getItem("user"));
-
+let user;
+user = JSON.parse(localStorage.getItem("user"));
+console.log(user);
 document
   .getElementById("certificateForm")
   .addEventListener("submit", function (event) {
@@ -44,8 +45,8 @@ function addCertificate(user, certificate) {
       }
       return response.text();
     })
-    .then((data) => {
-      alert("Certificate added successfully.");
+    .then(() => {
+      location.reload();
     })
     .catch((error) => {
       console.error("Error:", error);
