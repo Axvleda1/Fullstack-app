@@ -1,0 +1,35 @@
+﻿h1 {
+  color: #007bff;
+  text-align: center;
+  margin-top: 15%;
+  font-size: 75px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+h2 {
+  margin-top: -20px;
+  color: #007bff;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#login-btn,
+#reg-btn {
+  display: inline;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  border: 0;
+  background-color: #439eff;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+#login-btn {
+  margin-left: 83%;
+}
+
+#login-btn:hover,
+#reg-btn:hover {
+  background-color: #2478d1;
+}

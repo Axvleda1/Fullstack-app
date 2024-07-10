@@ -137,3 +137,6 @@ C:\Users\Luka\Desktop\Fullstack\backend\WebApplication4\obj\Debug\net8.0\refint\
 C:\Users\Luka\Desktop\Fullstack\backend\WebApplication4\obj\Debug\net8.0\LogInBack.pdb
 C:\Users\Luka\Desktop\Fullstack\backend\WebApplication4\obj\Debug\net8.0\LogInBack.genruntimeconfig.cache
 C:\Users\Luka\Desktop\Fullstack\backend\WebApplication4\obj\Debug\net8.0\ref\LogInBack.dll
+C:\Users\Luka\Desktop\Fullstack\backend\WebApplication4\bin\Debug\net8.0\LogInBack.staticwebassets.runtime.json
+C:\Users\Luka\Desktop\Fullstack\backend\WebApplication4\obj\Debug\net8.0\LogInBack.Properties.Resources.resources
+C:\Users\Luka\Desktop\Fullstack\backend\WebApplication4\obj\Debug\net8.0\LogInBack.csproj.GenerateResource.cache

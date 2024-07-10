@@ -6,17 +6,7 @@ builder.Services.AddSingleton<IEmailService, EmailService>();
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
 builder.Services.AddControllers();
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowSpecificOrigin", builder =>
-    {
-        builder.WithOrigins("http://127.0.0.1:44310")
-               .AllowAnyHeader()
-               .AllowAnyMethod()
-               .AllowCredentials();
-    });
-});
+builder.Services.AddRazorPages();
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
@@ -34,12 +24,18 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 app.UseRouting();
 
-app.UseCors("AllowSpecificOrigin");
 
 app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.MapRazorPages();
+
+app.UseDefaultFiles(new DefaultFilesOptions
+{
+    DefaultFileNames = new List<string> { "index.html" }
+});
 app.MapControllers();
+app.UseStaticFiles();
 
 app.Run();

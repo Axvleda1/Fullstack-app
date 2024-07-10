@@ -4,11 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
 function loadCertificates() {
   const loggedInUser = localStorage.getItem("user");
   const certificateForDto = localStorage.getItem("certificate");
-
+  
   const requestPayload = {
     User: JSON.parse(loggedInUser),
     Certificate: JSON.parse(certificateForDto),
-  };
+    };
+  console.log(requestPayload)
 
   fetch("https://localhost:44358/api/Certificates/getCertificates", {
     method: "POST",

@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\wwwroot\\pages\\logIn.html",
+      "PackagePath": "staticwebassets\\pages\\logIn.html"
+    },
+    {
+      "Id": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\wwwroot\\pages\\main.html",
+      "PackagePath": "staticwebassets\\pages\\main.html"
+    },
+    {
+      "Id": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\wwwroot\\pages\\signUp.html",
+      "PackagePath": "staticwebassets\\pages\\signUp.html"
+    },
+    {
+      "Id": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\wwwroot\\scripts\\AddSertificate.js",
+      "PackagePath": "staticwebassets\\scripts\\AddSertificate.js"
+    },
+    {
+      "Id": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\wwwroot\\scripts\\SendToApiLogIn.js",
+      "PackagePath": "staticwebassets\\scripts\\SendToApiLogIn.js"
+    },
+    {
+      "Id": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\wwwroot\\scripts\\SendToApiSignUp.js",
+      "PackagePath": "staticwebassets\\scripts\\SendToApiSignUp.js"
+    },
+    {
+      "Id": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\wwwroot\\scripts\\getCertificates.js",
+      "PackagePath": "staticwebassets\\scripts\\getCertificates.js"
+    },
+    {
+      "Id": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\wwwroot\\scripts\\index.js",
+      "PackagePath": "staticwebassets\\scripts\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\wwwroot\\styles\\index.css",
+      "PackagePath": "staticwebassets\\styles\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\wwwroot\\styles\\mainStyles.css",
+      "PackagePath": "staticwebassets\\styles\\mainStyles.css"
+    },
+    {
+      "Id": "C:\\Users\\Luka\\Desktop\\Fullstack\\backend\\WebApplication4\\wwwroot\\styles\\style.css",
+      "PackagePath": "staticwebassets\\styles\\style.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LogInBack.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.LogInBack.props",
+      "PackagePath": "build\\LogInBack.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.LogInBack.props",
+      "PackagePath": "buildMultiTargeting\\LogInBack.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.LogInBack.props",
+      "PackagePath": "buildTransitive\\LogInBack.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

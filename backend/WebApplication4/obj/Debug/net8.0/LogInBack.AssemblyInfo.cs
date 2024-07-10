@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LogInBack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f73427e0a7daa9ab33ed411250bd2038caa13de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+650b2f3faf4ae2e2b60cd4b9f8ca5d92daf75f57")]
 [assembly: System.Reflection.AssemblyProductAttribute("LogInBack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LogInBack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
